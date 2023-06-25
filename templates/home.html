@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Comapany</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}">
+    <a href="{{url_for('logout')}}"><button class="btnstyle">logout</button></a>
+    <style>
+      .navbar .form-inline {
+          display: flex;
+          justify-content: flex-end;
+      }
+  </style>
+</head>
+<body>
+  <div class="student">
+    <center><h1>Car Rental Company</h1></center>
+    </div>
+    <div style="text-align:center;">
+    <a href="{{url_for('rent_car')}}"><button class="btnstyle">Rent a car</button></a>
+    
+  </div>
+  
+</body>
+</html>

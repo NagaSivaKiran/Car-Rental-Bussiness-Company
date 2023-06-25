@@ -1,0 +1,36 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+  }
+  body {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3DIw9wr8fLJghFZceIhdvn5hWmBtF6MkzsA&usqp=CAU');
+    background-size: cover;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  form {
+    margin: 0 auto;
+    width: 500px;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }

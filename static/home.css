@@ -1,0 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/new-ghost-white-fr-3-4-1-1598911711.jpg');
+    background-size: cover;
+}
+
+.btnstyle {
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btnstyle {
+    background-color: rgb(10, 248, 14);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.student {
+    margin-top: 23%;
+}

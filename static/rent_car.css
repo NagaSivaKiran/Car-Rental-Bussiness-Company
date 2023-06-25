@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .cars {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .car {
+    width: 30%;
+    margin: 0 10px;
+  }
+  .car img {
+    width: 100%;
+  }
+  .car h2 {
+    margin-top: 0;
+  }

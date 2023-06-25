@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rent a Car</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='rent_car.css') }}">
+  <style>
+    .cars {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .car {
+      width: 30%;
+      margin: 0 10px;
+    }
+    .car img {
+      width: 100%;
+    }
+    .car h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <center><h1>Rent a Car</h1></center>
+  <div class="cars">
+    <div class="car">
+      <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/134113/new-wr-v-exterior-left-front-three-quarter-2.jpeg?isig=0&q=75" alt="Car 1">
+      <h2>Honda New WR-V</h2>
+      <p>Engine: 1509 cc</p>
+      <p>Transmission: Manual & Automatic</p>
+      <p>Fuel Type: Petrol</p>
+      <p>Power: 169 bhp</p>
+      <p>Car Rent Per Day: Rs.2000/-</p>
+      <p>Car Rent Per Week: Rs.22,000/-</p>
+    </div>
+    <div class="car">
+      <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/45951/amaze-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=75" alt="Car 2">
+      <h2>Honda Amaze</h2>
+      <p>Engine: 1500 cc</p>
+      <p>Transmission: Manual & Automatic</p>
+      <p>Fuel Type: Petrol</p>
+      <p>Power: 129 bhp</p>
+      <p>Car Rent Per Day: Rs.2000/-</p>
+      <p>Car Rent Per Week: Rs.22,000/-</p>
+    </div>
+    <div class="car">
+      <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/142515/elevate-exterior-left-front-three-quarter-4.jpeg?isig=0&q=75" alt="Car 3">
+      <h2>Honda Elevate</h2>
+      <p>Engine: 1434 cc</p>
+      <p>Transmission: Manual & Automatic</p>
+      <p>Fuel Type: Petrol</p>
+      <p>Power: 120 bhp</p>
+      <p>Car Rent Per Day: Rs.2000/-</p>
+      <p>Car Rent Per Week: Rs.22,000/-</p>
+    </div>
+  </div>
+  <div class="submit-button">
+    <div style="text-align: center;">
+      <a href="{{ url_for('user_details') }}"><button class="btnstyle">Rent Your Favorite Car</button></a>
+    </div>
+  </div>
+</body>
+</html>

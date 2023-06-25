@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rent a Car</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='user_details.css')}}">
+</head>
+<body>
+  <center><h1>Enter Your Details To Book Your Favourite Car</h1></center>
+  <form action="{{url_for('thank_you')}}" method="post">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input type="tel" name="phone" id="phone">
+    </div>
+    <div>
+      <label for="pickup_date">Pickup Date</label>
+      <input type="date" name="pickup_date" id="pickup_date">
+    </div>
+    <div>
+      <label for="return_date">Return Date</label>
+      <input type="date" name="return_date" id="return_date">
+    </div>
+    <div>
+      <label for="car_type">Car Type</label>
+      <select name="car_type" id="car_type">
+        <option value="Sedan">Honda new WR-V</option>
+        <option value="SUV">Honda Amaze</option>
+        <option value="Van">Honda Elevate</option>
+      </select>
+    </div>
+    <div>
+      <label for="num_of_days">Number of Days</label>
+      <input type="number" name="num_of_days" id="num_of_days">
+    </div>
+    <div>
+      <button type="submit" class="btnstyle">Submit</button>
+    </div>
+  </form>
+</body>
+</html>

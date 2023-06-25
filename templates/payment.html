@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h2>Payment</h2>
+    <h4>Booking ID: {{ booking_id }}</h4>
+    <h4>Total Price: ${{ total_price }}</h4>
+    <form method="POST" action="{{ url_for('payment', token=token) }}">
+        <script
+            src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="YOUR_STRIPE_PUBLISHABLE_KEY"
+            data-amount="{{ total_price * 100 }}"
+            data-name="Car Rental"
+            data-description="Payment for Car Rental"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto">
+        </script>
+    </form>
+</body>
+</html>
