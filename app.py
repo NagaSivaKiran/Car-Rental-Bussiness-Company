@@ -10,14 +10,19 @@ app.secret_key = os.urandom(24)
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['SESSION_PERMANENT'] = False
 Session(app)
+user=os.environ.get('RDS_USERNAME')
+db=os.environ.get('RDS_DB_NAME')
+password=os.environ.get('RDS_PASSWORD')
+host=os.environ.get('RDS_HOSTNAME')
+port=os.environ.get('RDS_PORT')
+with mysql.connector.connect(host=host,user=user,password=password,port=port,db=db) as conn:
+    cursor=conn.cursor(buffered=True)
+    cursor.execute("create table if not exists users(username varchar(50) primary key,password varchar(15),email varchar(60))")
+    cursor.execute("create table if not exists notes(nid int not null auto_increment primary key,title tinytext,content text,date timestamp default now() on update now(),added_by varchar(50),foreign key(added_by) references users(username))")
+    cursor.close()
+mydb=mysql.connector.connect(host=host,user=user,password=password,db=db)
 
-mydb = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="admin",
-    database="cars",
-    autocommit=True
-)
+#mydb = pymysql.connect(host="localhost",user="root",password="admin",database="cars",autocommit=True)
 
 def create_table():
     try:
