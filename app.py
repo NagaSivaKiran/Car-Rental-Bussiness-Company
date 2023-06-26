@@ -18,7 +18,6 @@ port=os.environ.get('RDS_PORT')
 with mysql.connector.connect(host=host,user=user,password=password,port=port,db=db) as conn:
     cursor=conn.cursor(buffered=True)
     cursor.execute("create table if not exists users(username varchar(50) primary key,password varchar(15),email varchar(60))")
-    cursor.execute("create table if not exists notes(nid int not null auto_increment primary key,title tinytext,content text,date timestamp default now() on update now(),added_by varchar(50),foreign key(added_by) references users(username))")
     cursor.close()
 mydb=mysql.connector.connect(host=host,user=user,password=password,db=db)
 
